@@ -1,0 +1,42 @@
+html { 
+  background: url(../images/tattooing.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: relative;
+}
+
+.title {
+    width: 100%;
+    font-family: "Lobster", sans-serif;
+    position: absolute;
+    text-align: center;
+    margin-top: 300px;
+    background: black;
+    background: transparent;
+}
+
+.title-wrapper {
+    position: relative;
+    opacity: 1;
+    h1, h2 {
+        color: #c7c7c7;
+    }
+    h1 {
+        font-size: 110px;
+        margin: 0 auto;
+    }
+    h2 {
+        font-size: 40px;
+        margin: 0 auto;
+    }
+}
+
+.bg-color-filter {
+    background-color: rgba(255,255,255,0.15);
+    width: 100%;
+    padding: 431px 0;
+    top: 0;
+    position: fixed;
+}

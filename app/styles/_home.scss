@@ -1,42 +1,122 @@
-html { 
-  background: url(../images/tattooing.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  position: relative;
+#global-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    perspective: 1px;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
-.title {
-    width: 100%;
-    font-family: "Lobster", sans-serif;
-    position: absolute;
-    text-align: center;
-    margin-top: 300px;
-    background: black;
-    background: transparent;
-}
-
-.title-wrapper {
-    position: relative;
-    opacity: 1;
-    h1, h2 {
-        color: #c7c7c7;
-    }
-    h1 {
-        font-size: 110px;
-        margin: 0 auto;
-    }
-    h2 {
-        font-size: 40px;
-        margin: 0 auto;
-    }
+.bg { 
+    background: url(../images/tattooing.jpg) no-repeat center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: relative; 
+    transform: translateZ(-3px) scale(4.1);
+    overflow: hidden;
 }
 
 .bg-color-filter {
     background-color: rgba(255,255,255,0.15);
     width: 100%;
-    padding: 431px 0;
     top: 0;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
     position: fixed;
+    // z-index: 99;
+    transform: translateZ(-3px) scale(4.1);
+    overflow: hidden;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav {
+    position: relative;
+    // margin-bottom: 250px;
+    text-decoration: none;
+    ul {
+        list-style: none;
+        margin: 0;
+        li {
+            display: inline;
+            a {
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 2px; 
+                text-decoration: none;
+                margin: 0 25px;
+                font-size: 30px;
+                color: $white;
+                transition: all 0.3s ease-in-out;
+                &:hover {
+                    color: $pink;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+.landing {
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    width: 100%;
+    font-family: "Lobster", sans-serif;
+    position: absolute;
+    text-align: center;
+    background: transparent;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.title-wrapper {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 1;
+    transform: translateZ(-3px) scale(4.1) translateX(-13%) translateY(30%);
+    h1, h2 {
+        color: $white;
+    }
+    h1 {
+        font-size: 125px;
+        margin: 0 auto;
+    }
+    h2 {
+        font-family: 'Montserrat', sans-serif;
+        text-transform: uppercase;
+        font-weight: 300;
+        font-size: 25px;
+        letter-spacing: 4px;
+        word-spacing: 4px;
+        margin: 0 auto;
+    }
+}
+
+.artists {
+    position: absolute;
+    width: 100%;
+    height: 1000px;
+    text-align: center;
+    color: $black;
+    display: block;
+    background-color: $white;
+    overflow: hidden;
+    z-index: 9999999;
+    transform: translateZ(0px) scale(1);
+    h2 {
+        padding: 50px 0;
+        font-size: 35px;
+        text-transform: uppercase;
+    }
 }

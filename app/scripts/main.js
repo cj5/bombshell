@@ -1,4 +1,13 @@
 $(document).ready(function(){
+
+    //creates a smooth scroll when any a link is clicked
+    // $('#artists').click(function(){
+    //     $('html, body').animate({
+    //         scrollTop: $( $.attr(this, 'href') ).offset().top
+    //     }, 500);
+    //     return false;
+    // });
+
     function updateContainer() {
         var theHeight = $(window).height();
         var titleWrapperHeight = $('.title-wrapper').height();
@@ -26,4 +35,6 @@ $(document).ready(function(){
         updateContainer();
     });
 
-});    
+}); 
+
+

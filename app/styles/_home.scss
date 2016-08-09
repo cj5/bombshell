@@ -18,6 +18,7 @@
     position: relative; 
     transform: translateZ(-3px) scale(4.1);
     overflow: hidden;
+    z-index: -999;
 }
 
 .bg-color-filter {
@@ -31,6 +32,7 @@
     // z-index: 99;
     transform: translateZ(-3px) scale(4.1);
     overflow: hidden;
+    z-index: -999;
 }
 
 .bg-color-filter-2 {
@@ -44,11 +46,13 @@
     // z-index: 99;
     transform: translateZ(-3px) scale(4.1);
     overflow: hidden;
+    z-index: -999;
 }
 
 body {
     font-family: 'Montserrat', sans-serif;
     color: $black;
+    overflow-x: hidden; 
 }
 
 // NAVICON -----------------------
@@ -134,7 +138,7 @@ nav {
                 text-decoration: none;
                 margin: 0 6px;
                 font-size: 10px;
-                color: transparent;
+                // color: transparent;
                 transition: color 0.3s ease-in-out;
                 &:hover {
                     color: $pink;
@@ -189,7 +193,8 @@ nav {
     font-size: 30px;
     font-weight: 100;
     color: $white;  
-    img {   
+    img { 
+    z-index: 9999;  
         transition: all 0.3s ease-in-out;
         cursor: pointer;
     }
@@ -198,45 +203,159 @@ nav {
     }
 }
 
-#artists {
-    position: absolute;
+.divider-line {
+    text-align: center;
+    width: 100%;
+    background-color: white;
+}
+
+h2.section-title {
+    font-weight: 800;
+    margin: 80px 0 60px;
+    font-size: 45px;
+    text-transform: uppercase;
+}
+
+section {
+    padding-bottom: 100px;
+    text-align: center;
+    position: relative;
     width: 100%;
     text-align: center;
-    color: $black;
+}
+
+.section {
     display: block;
     background-color: white;
     overflow: hidden;
     z-index: 9999999;
     transform: translateZ(0px) scale(1);
-    padding-bottom: 330px;
-    h2 {
-        font-weight: 800;
-        margin: 80px 0 30px;
-        font-size: 40px;
-        text-transform: uppercase;
-    }
-    h3 {
-        font-family: 'Pattaya', sans-serif;
-        font-size: 30px;
-        // text-transform: uppercase;
-        margin: 20px 0 60px;
-    }
+    padding-bottom: 100px;
     img {
         width: 100%;
         padding: 0 15px;
     }
 }
 
-// .artists-images-wrapper {
-//     width: 100%;
-//     display: inline-block;
-// }
+#artists {
+    h3 {
+        font-family: 'Pattaya', sans-serif;
+        font-size: 30px;
+        // text-transform: uppercase;
+    }
+}
 
 .image-wrapper {
     display: inline;
     float: left;
     width: 26%;
     transform: translateX(41%);
+}
+
+
+.section-content {
+    width: 65%;
+    h3, p {
+        text-align: left;
+    }
+    h3 {
+        text-transform: uppercase;
+        font-size: 20px;
+        margin: 0;
+        padding: 20px 0 10px;
+        // font-family: 'Pattaya', sans-serif;
+    }
+    p {
+        padding: 0 0 30px 0px;
+    }
+}
+
+#news {
+    position: relative;
+    width: 100%;
+    margin-top: -1px;
+}
+
+#merch {
+    margin-top: -1px;
+    position: relative;
+    width: 100%;
+    h3 {
+        font-family: 'Pattaya', sans-serif;
+        font-size: 30px;
+        // text-transform: uppercase;
+    }
+    img {
+        width: 100%;
+        padding: 0 15px;
+    }
+    h4 {
+        color: $pink;
+    }
+    p {
+        font-size: 16px;
+        margin: 0 10px 10px;
+    }
+}
+
+p {
+    font-family: 'Poiret One', sans-serif;
+    color: $black;
+    letter-spacing: 1px;
+    word-spacing: 5px;
+    font-size: 18px;
+}
+
+h3 {
+    margin: 40px 0 20px;
+}
+
+#faq {
+    margin-top: -1px;
+    p {
+        text-align: left;
+    }
+    .question {
+        padding: 0;
+        font-family: 'Montserrat', sans-serif;
+        text-transform: uppercase;
+    }
+    .answer {
+        padding: 0 0 40px 0;
+        // position: relative;
+        // left: 20px;
+    }
+}
+
+#contact { 
+    iframe {
+        max-width: 93%; 
+    }
+    .contact-content {
+        padding-left: 40px;
+    }
+    h3 {
+        padding-top: 0px;
+        text-align: left;
+        text-transform: uppercase;
+        font-size: 16px;
+        margin: 30px 0 10px;
+    }
+    p {
+        font-size: 16px;
+        text-align: left;
+        padding: 0;
+        // font-size: 16px;
+    }
+    .location {
+        padding: 0px 0 0px;
+    }
+    .hours {
+        padding: 0 0 0px;
+    }
+    iframe {
+
+    }
 }
 
 // MEDIA QUERIES -------------------------------------
@@ -275,14 +394,10 @@ nav {
                     margin: 0 25px;
                     font-size: 30px;
                     color: $white;
-                    transition: all 0.3s ease-in-out;
+                    transition: color 0.3s ease-in-out;
                     &:hover {
                         color: $pink;
                         text-decoration: none;
-                    }
-                    &:visited, &:focus, &:hover, &:active {
-                        color: $white   ;
-                        text-decoration: none; 
                     }
                 }
             }
@@ -319,9 +434,10 @@ nav {
         font-size: 30px;
         font-weight: 100;
         color: $white; 
-        &:visited, &:focus, &:hover, &:active {
-            color: $white   ;
-            text-decoration: none; 
+        a {
+            color: $white;
+            text-decoration: none;
+            z-index: 99999;
         } 
         img {   
             transition: all 0.3s ease-in-out;
@@ -332,28 +448,30 @@ nav {
         }
     }
 
+    h2.section-title {
+        margin: 100px 0 60px;
+    }
+
+    .section-content {
+        width: 60%;
+    }
+
     #artists {
-        position: absolute;
-        width: 100%;
-        text-align: center;
-        color: $black;
-        display: block;
-        background-color: white;
-        overflow: hidden;
-        z-index: 9999999;
-        transform: translateZ(0px) scale(1);
-        padding-bottom: 330px;
+        // position: relative;
+        // width: 100%;
+        // display: block;
+        // background-color: white;
+        // overflow: hidden;
+        // z-index: 9999999;
+        // transform: translateZ(0px) scale(1);
         h2 {
             font-weight: 800;
-            margin: 80px 0 30px;
-            font-size: 40px;
+            // font-size: 45px;
             text-transform: uppercase;
         }
         h3 {
             font-family: 'Pattaya', sans-serif;
             font-size: 30px;
-            // text-transform: uppercase;
-            margin: 20px 0 60px;
         }
         img {
             width: 100%;
@@ -372,16 +490,30 @@ nav {
         width: 26%;
         transform: translateX(41%);
     }
+    #contact {
+        .no-top-margin {
+            margin-top: 0;
+        }
+    }
 }    
 
 // SMALL LAPTOP/DESKTOP -----------------------
 @media screen and (min-width: 992px) {
 
-}       
+}
+
+// SMALL LAPTOP/DESKTOP -----------------------
+@media screen and (min-width: 1080px) {
+    .section-content {
+        width: 50%;
+    }
+}        
 
 // MEDIUM LAPTOP/DESKTOP ----------------------
 @media screen and (min-width: 1200px) {
-
+    .section-content {
+        width: 45%;
+    }
 }           
 
 // LARGE LAPTOP/DESKTOP -----------------------

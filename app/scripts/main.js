@@ -1,4 +1,6 @@
 $(document).ready(function(){
+       
+
 
     //creates a smooth scroll when any a link is clicked
     // $('a').click(function(){
@@ -8,6 +10,23 @@ $(document).ready(function(){
     //     return false;
     // });
 
+    // $('a[href^="#"]').on('click',function (e) {
+    //     e.preventDefault();
+
+    //     var target = this.hash;
+    //     var $target = $(target);
+
+    //     $('html, body').stop().animate({
+    //         'scrollTop': $target.offset().top
+    //     }, 900, 'swing', function () {
+    //         window.location.hash = target;
+    //     });
+    // });
+
+    // $("a").click(function(event) {
+    //     event.preventDefault();
+    //     $('html,body').animate( { scrollTop:$(this.hash).offset().top } , 1000);
+    //     });
 
     // 'catTopPosition' is the amount of pixels #cat
     // is from the top of the document

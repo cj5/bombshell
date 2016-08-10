@@ -310,6 +310,10 @@ h3 {
     margin: 40px 0 20px;
 }
 
+a {
+    text-decoration: none;
+}
+
 #faq {
     margin-top: -1px;
     p {
@@ -358,29 +362,43 @@ h3 {
     }
 }
 
-.icon {
-    margin: 20px 3px;
+.icon-down {
     cursor: pointer;
-    transform: translateY(100%);
-    width: 30px;
-    height: 30px;
-    fill: $white;
+    transform: translateY(0%);
+    width: 40px;
+    height: 40px;
+    fill: white;
     transition: all 0.3s ease-in-out;
     &:hover {
         fill: $pink;
     }
 }
 
+.icon {
+    margin: 20px 3px;
+    cursor: pointer;
+    transform: translateY(150%);
+    width: 30px;
+    height: 30px;
+    fill: $white;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+        fill: $pink;
+        overflow: hidden;
+    }
+}
+
 .footer {
     height: 350px;
     background-color: $black;
-    img {
-        width: 50px;
-        fill: orange;
+    .svg-icons {
+        a {
+            text-decoration: none;
+        }
     }
     .footer-logo {
         position: relative;
-        top: 15%;
+        top: 20%;
         h2 {
             font-family: 'Lobster' ,sans-serif;
             font-size: 70px;

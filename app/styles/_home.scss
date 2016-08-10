@@ -358,6 +358,52 @@ h3 {
     }
 }
 
+.icon {
+    margin: 20px 3px;
+    cursor: pointer;
+    transform: translateY(100%);
+    width: 30px;
+    height: 30px;
+    fill: $white;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+        fill: $pink;
+    }
+}
+
+.footer {
+    height: 350px;
+    background-color: $black;
+    img {
+        width: 50px;
+        fill: orange;
+    }
+    .footer-logo {
+        position: relative;
+        top: 15%;
+        h2 {
+            font-family: 'Lobster' ,sans-serif;
+            font-size: 70px;
+            color: $white;
+            margin: 0;
+        }
+        h3 {
+            color: $white;
+            text-transform: uppercase;
+            font-size: 12px;
+            margin: 0px 0 5px;
+            letter-spacing: 4px;
+        }
+    }
+    p {
+        color: $white;
+        position: relative;
+        top: 55%;
+        font-size: 11px;
+        word-spacing: 0px;
+    }
+}
+
 // MEDIA QUERIES -------------------------------------
 
 // LARGE PHONE --------------------------------

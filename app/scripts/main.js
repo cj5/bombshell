@@ -1,5 +1,14 @@
 $(document).ready(function(){
-       
+    $('#navicon').click(function(){
+        $(this).toggleClass('open'); //(navicon transition)
+        $('.menu').toggleClass('open'); //(adds nav menu)
+    });
+
+    //toggles navicon when a is clicked from .menu only
+    $('a.a-mobile').click(function(){
+        $('#navicon').toggleClass('open');
+        $('.menu').removeClass('open');
+    });      
 
 
     //creates a smooth scroll when any a link is clicked
@@ -66,6 +75,19 @@ $(document).ready(function(){
         $('.main-nav').css('padding-bottom', navHeight);
 
         $('.artists').css('top', theHeight);
+
+        // if ($(window).innerWidth() <= 753) {
+        //     $('.a').addClass('display-none');
+        // // } else {
+            
+        // }
+
+        // if ($(window).innerWidth() <= 753){
+        //         menu.className = 'display-none';
+        //     } else {
+        //         menu.className ='display';
+        //     }
+           
 
         console.log('navHeight', navHeight);
     } 

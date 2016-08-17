@@ -16,7 +16,7 @@
     -o-background-size: cover;
     background-size: cover;
     position: relative; 
-    transform: translateZ(-3px) scale(4.1);
+    transform: translateZ(-5px) scale(6.1);
     overflow: hidden;
     z-index: -999;
 }
@@ -60,11 +60,11 @@ body {
     top: 30px;
     right: 20px;
     position: fixed;
-    width: 35px;
+    width: 30px;
     height: 25px;
     z-index: 999999;
     // margin: 50px auto;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.3s ease-in-out;
     cursor: pointer;
     // overflow: hidden;
     opacity: 1;
@@ -85,11 +85,11 @@ body {
 }
 
 #navicon span:nth-child(2),#navicon span:nth-child(3) {
-  top: 9px;
+  top: 8px;
 }
 
 #navicon span:nth-child(4) {
-  top: 18px;
+  top: 16px;
 }
 
 #navicon.open span:nth-child(1) {
@@ -117,8 +117,63 @@ body {
   width: 0%;
   left: 50%;
 }
-// NAVICON END --------------------------
 
+// NAVICON END --------------------------
+.menu {
+    background: rgba(0, 0, 0, 0);
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -99999;
+    ul {
+        position: relative;
+        top: 47%;
+        transform: translateY(-50%);
+        z-index: 900;
+        text-align: center;
+        list-style-type: none;
+        padding: 0;
+        margin: 0 25px;
+        li {
+            display: block;
+            margin: 10px 10px;
+            // display: none;
+            a {
+                text-decoration: none;
+                color: transparent;
+                font-size: 40px;
+                text-transform: uppercase;
+                letter-spacing: 4px;
+                font-weight: 600;
+                transition: all 0.3s ease-in-out;
+            }
+            // a:link, a:visited {
+            //     color: transparent;
+            // }
+            // a:hover {
+            //     clear: both;
+            // }    
+        } 
+    }
+}
+
+.menu.open {
+    background: rgba(0, 0, 0, 0.8);
+    display: block;
+    z-index: 99999;
+    li {
+        display: block;
+        a {
+            color: $white;
+            transition: all 0.3s ease-in-out;
+        }
+    }           
+}
+
+// DESKTOP NAV ----------------------------
 nav {
     position: relative;
     // margin-bottom: 250px;
@@ -142,11 +197,15 @@ nav {
                 transition: color 0.3s ease-in-out;
                 &:hover {
                     color: $pink;
-                    text-decoration: none;
+                    text-decoration: none;    
                 }
-            }
+            }   
         }
     }
+}
+
+nav.main-nav {
+    display: none;
 }
 
 .landing {
@@ -168,7 +227,7 @@ nav {
     left: 50%;
     transform: translateX(-50%);
     opacity: 1;
-    transform: translateZ(-3px) scale(4.1) translateX(-13%) translateY(30%);
+    transform: translateZ(-5px) scale(6.1) translateX(-8%) translateY(38%);
     h1, h2 {
         color: $white;
     }
@@ -189,18 +248,16 @@ nav {
 
 .scroll-icon {
     position: relative;
-    bottom: -420px;
-    font-size: 30px;
-    font-weight: 100;
-    color: $white;  
-    img { 
-    z-index: 9999;  
-        transition: all 0.3s ease-in-out;
-        cursor: pointer;
-    }
-    img:hover {
-        opacity: .5;
-    }
+    bottom: -360px; 
+    z-index: 999;
+    // img { 
+    // z-index: 9999;  
+    //     transition: all 0.3s ease-in-out;
+    //     cursor: pointer;
+    // }
+    // img:hover {
+    //     opacity: .5;
+    // }
 }
 
 .divider-line {
@@ -233,7 +290,7 @@ section {
     padding-bottom: 100px;
     img {
         width: 100%;
-        padding: 0 15px;
+        padding: 0 25px;
     }
 }
 
@@ -245,16 +302,15 @@ section {
     }
 }
 
-.image-wrapper {
-    display: inline;
-    float: left;
-    width: 26%;
-    transform: translateX(41%);
-}
+// .image-wrapper {
+//     display: inline;
+//     // float: left;
+//     width: 40%;
+//     transform: translateX(41%);
+// }
 
 
 .section-content {
-    width: 65%;
     h3, p {
         text-align: left;
     }
@@ -282,19 +338,24 @@ section {
     width: 100%;
     h3 {
         font-family: 'Pattaya', sans-serif;
-        font-size: 30px;
+        font-size: 22px;
+        margin: 20px 0;
         // text-transform: uppercase;
     }
-    img {
-        width: 100%;
-        padding: 0 15px;
-    }
+    // img {
+    //     width: 100%;
+    //     padding: 0 15px;
+    // }
     h4 {
         color: $pink;
     }
     p {
         font-size: 16px;
-        margin: 0 10px 10px;
+        margin: 0 10px 100px;
+
+    }
+    .no-bottom-margin {
+        margin-bottom: 0;
     }
 }
 
@@ -307,7 +368,11 @@ p {
 }
 
 h3 {
-    margin: 40px 0 20px;
+    margin: 20px 0 60px;
+}
+
+.no-bottom-margin {
+    margin-bottom: 0;
 }
 
 a {
@@ -331,12 +396,16 @@ a {
     }
 }
 
-#contact { 
+#contact {
+    .col-sm-6 {
+        padding: 0;
+    } 
     iframe {
-        max-width: 93%; 
+        max-width: 100%; 
+        height: 200px;
     }
     .contact-content {
-        padding-left: 40px;
+        // padding-left: 40px;
     }
     h3 {
         padding-top: 0px;
@@ -357,9 +426,6 @@ a {
     .hours {
         padding: 0 0 0px;
     }
-    iframe {
-
-    }
 }
 
 .icon-down {
@@ -369,9 +435,6 @@ a {
     height: 40px;
     fill: white;
     transition: all 0.3s ease-in-out;
-    &:hover {
-        fill: $pink;
-    }
 }
 
 .icon {
@@ -421,175 +484,4 @@ a {
         word-spacing: 0px;
     }
 }
-
-// MEDIA QUERIES -------------------------------------
-
-// LARGE PHONE --------------------------------
-@media screen and (min-width: 350px) {
-
-}    
-
-// SMALL TABLET -------------------------------
-@media screen and (min-width: 480px) {
-
-}
-
-// LARGE TABLET -------------------------------
-@media screen and (min-width: 768px) {
-    #navicon {
-        display: none;
-    }
-
-    nav {
-        position: relative;
-        // margin-bottom: 250px;
-        text-decoration: none;
-        ul {
-            list-style: none;
-            margin: 0;
-            li {
-                display: inline;
-                a {
-                    font-family: 'Montserrat', sans-serif;
-                    font-weight: 700;
-                    text-transform: uppercase;
-                    letter-spacing: 2px; 
-                    text-decoration: none;
-                    margin: 0 25px;
-                    font-size: 30px;
-                    color: $white;
-                    transition: color 0.3s ease-in-out;
-                    &:hover {
-                        color: $pink;
-                        text-decoration: none;
-                    }
-                }
-            }
-        }
-    }
-
-    .title-wrapper {
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);
-        opacity: 1;
-        transform: translateZ(-3px) scale(4.1) translateX(-13%) translateY(30%);
-        h1, h2 {
-            color: $white;
-        }
-        h1 {
-            font-size: 125px;
-            margin: 0 auto;
-        }
-        h2 {
-            font-family: 'Montserrat', sans-serif;
-            text-transform: uppercase;
-            font-weight: 300;
-            font-size: 25px;
-            letter-spacing: 4px;
-            word-spacing: 4px;
-            margin: 0 auto;
-        }
-    }
-
-    .scroll-icon {
-        position: relative;
-        bottom: -420px;
-        font-size: 30px;
-        font-weight: 100;
-        color: $white; 
-        a {
-            color: $white;
-            text-decoration: none;
-            z-index: 99999;
-        } 
-        img {   
-            transition: all 0.3s ease-in-out;
-            cursor: pointer;
-        }
-        img:hover {
-            opacity: .5;
-        }
-    }
-
-    h2.section-title {
-        margin: 100px 0 60px;
-    }
-
-    .section-content {
-        width: 60%;
-    }
-
-    #artists {
-        // position: relative;
-        // width: 100%;
-        // display: block;
-        // background-color: white;
-        // overflow: hidden;
-        // z-index: 9999999;
-        // transform: translateZ(0px) scale(1);
-        h2 {
-            font-weight: 800;
-            // font-size: 45px;
-            text-transform: uppercase;
-        }
-        h3 {
-            font-family: 'Pattaya', sans-serif;
-            font-size: 30px;
-        }
-        img {
-            width: 100%;
-            padding: 0 15px;
-        }
-    }
-
-    // .artists-images-wrapper {
-    //     width: 100%;
-    //     display: inline-block;
-    // }
-
-    .image-wrapper {
-        display: inline;
-        float: left;
-        width: 26%;
-        transform: translateX(41%);
-    }
-    #contact {
-        .no-top-margin {
-            margin-top: 0;
-        }
-    }
-}    
-
-// SMALL LAPTOP/DESKTOP -----------------------
-@media screen and (min-width: 992px) {
-
-}
-
-// SMALL LAPTOP/DESKTOP -----------------------
-@media screen and (min-width: 1080px) {
-    .section-content {
-        width: 50%;
-    }
-}        
-
-// MEDIUM LAPTOP/DESKTOP ----------------------
-@media screen and (min-width: 1200px) {
-    .section-content {
-        width: 45%;
-    }
-}           
-
-// LARGE LAPTOP/DESKTOP -----------------------
-@media screen and (min-width: 1400px) {
-    @media screen and (min-width: 1200px) {
-
-    }           
-}      
-
-
-
-
-
-
 

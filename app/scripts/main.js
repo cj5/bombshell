@@ -16,6 +16,14 @@ $(document).ready(function(){
     //     $('html, body').animate({
     //         scrollTop: $($.attr(this, 'href')).offset().top
     //     }, 500);
+    //     console.log('smooth scroll', this);
+    //     return false;
+    // });
+
+    // $('a').click(function(){
+    //     $('html, body').animate({
+    //         scrollTop: $("#").offset().top
+    //     }, 2000);
     //     return false;
     // });
 

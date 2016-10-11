@@ -11,7 +11,9 @@
 
 // SMALL TABLET -------------------------------
 @media screen and (min-width: 480px) {
-
+    .section img {
+        width: 55%;
+    }
 }
 
 // LARGE TABLET -------------------------------
@@ -23,6 +25,10 @@
     nav.main-nav {
         display: inherit;
         z-index: 99999999;
+    }
+
+    .section {
+        padding-bottom: 100px;
     }
 
     nav {
@@ -77,8 +83,11 @@
     }
 
     .scroll-icon {
-        position: relative;
-        bottom: -750px;
+        position: absolute;
+        transform: translateX(-50%);
+        left: 50%;
+        // margin: 0 auto;
+        top: 700px;
         font-size: 30px;
         font-weight: 100;
         color: $white; 
@@ -183,7 +192,7 @@
         }
         p {
             font-size: 16px;
-            margin: 0 10px 10px;
+            margin: 0 15px 10px;
         }
     }
 
@@ -245,9 +254,6 @@
         }
         .hours {
             padding: 0 0 0px;
-        }
-        iframe {
-
         }
     }
 

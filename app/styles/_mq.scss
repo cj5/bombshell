@@ -61,7 +61,7 @@
     }
 
     .title-wrapper {
-        position: relative;
+        position: absolute;
         left: 50%;
         opacity: 1;
         h1, h2 {
@@ -107,7 +107,7 @@
     }
 
     h2.section-title {
-        margin: 100px 0 60px;
+        margin: 80px 0 60px;
     }
 
     .section-content {
@@ -129,7 +129,7 @@
         }
         h3 {
             font-family: 'Pattaya', sans-serif;
-            font-size: 30px;
+            font-size: 26px;
         }
         img {
             width: 100%;
@@ -143,10 +143,9 @@
     // }
 
     .image-wrapper {
-        display: inline;
+        display: inline-block;
+        width: 33%;
         float: left;
-        width: 30%;
-        transform: translateX(16%);
     }
 
 
@@ -205,7 +204,7 @@
     }
 
     h3 {
-        margin: 40px 0 20px;
+        margin: 20px 0;
     }
 
     a {
@@ -349,12 +348,42 @@
         img {
             padding: 0 15px;
         }
+        h3 {
+          font-size: 22px;
+        }
     }
-
+    .artists-images-wrapper {
+      // display: inline-block;
+      // width: 100%;
+      .images-wrapper {
+        display: inline-block;
+        width: auto;
+        margin: 0 auto;
+      }
+    }
     .image-wrapper {
-        width: 26%;
-        transform: translateX(41%);
+        width: 20%;        
+        // max-width: 265px;
+        display: inline-block;
+        float: left;
+        // transform: translateX(41%);
     }
+    .merch.artists-images-wrapper {
+      // display: inline-block;
+      // width: 100%;
+      .images-wrapper {
+        display: inline-block;
+        width: auto;
+        margin: 0 auto;
+      }
+      .image-wrapper {
+          width: 33%;        
+          // max-width: 265px;
+          display: inline-block;
+          float: left;
+          // transform: translateX(41%);
+      }
+    }    
 }
 
 // SMALL LAPTOP/DESKTOP -----------------------
@@ -369,7 +398,27 @@
     .section-content {
         width: 45%;
     }
-}           
+    #artists h3 {
+      font-size: 24px;
+    }
+}
+
+@media screen and (min-width: 1230px) {
+  // .artists-images-wrapper {
+  //   display: inline-block;
+  //   width: 100%;
+  //   .images-wrapper {
+  //     display: inline-block;
+  //     width: auto;
+  //     margin: 0 auto;
+  //   }
+  // }
+  // .image-wrapper {
+  //     width: 26%;        
+  //     max-width: 235px;
+  //     // transform: translateX(41%);
+  // }
+}    
 
 // LARGE LAPTOP/DESKTOP -----------------------
 @media screen and (min-width: 1400px) {

@@ -55,6 +55,8 @@
     </defs>
     </svg>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
   </head>
   <body>
     <!--[if lt IE 10]>
@@ -103,7 +105,7 @@
             </nav>
             <div class="title-wrapper">        
                 <h1>Bombshell</h1>
-                <h2>Tattoo & Piercing</h2>
+                <h2>Tattoo &amp; Piercing</h2>
             </div>
             <div class="scroll-icon">
                 <a href="#artists">
@@ -118,22 +120,30 @@
 <!-- ARTISTS SECTION -->
         <section id="artists" class="section">
             <h2 class="section-title">Artists</h2>
-            <div class="artists-images-wrapper">
-                
-                <!-- ROW 1 -->
-                <div class="image-wrapper">
-                    <img src="images/artist-2.jpg">
-                    <h3>Scott Owner</h3>
-                </div>
-                <div class="image-wrapper">
-                    <img src="images/artist-1.jpg">
-                    <h3>Cassie Rasmussen</h3>
-                </div>
-                <div class="image-wrapper">    
-                    <img src="images/artist-3.jpg">
-                    <h3 class="no-bottom-margin">Rita Lyström</h3>
-                </div> 
-  
+            <div class="artists-images-wrapper container">
+                <div class="images-wrapper">
+                  <!-- ROW 1 -->
+                  <div class="image-wrapper">
+                      <img src="images/scott-dees.jpg">
+                      <h3>Scott Dees</h3>
+                  </div>
+                  <div class="image-wrapper">    
+                      <img src="images/rita-lystrom.jpg">
+                      <h3>Rita Lyström</h3>
+                  </div>
+                  <div class="image-wrapper">
+                      <img src="images/cassie-rasmussen.jpg">
+                      <h3>Cassie Rasmussen</h3>
+                  </div>
+                  <div class="image-wrapper">    
+                      <img src="images/rebecca-hedman.jpg">
+                      <h3>Rebecca Hedman</h3>
+                  </div>
+                  <div class="image-wrapper">
+                      <img src="images/savanna-reicherts.jpg">
+                      <h3 class="no-bottom-margin">Savanna Reicherts</h3>
+                  </div>
+                </div>  
             </div>
         </section>
 
@@ -161,8 +171,8 @@
 <!-- MERCH SECTION -->
         <section id="merch" class="section">
             <h2 class="section-title">Merch</h2>
-            <div class="artists-images-wrapper">
-                
+            <div class="merch artists-images-wrapper container">
+              <div class="images-wrapper">  
                 <!-- ROW 1 -->
                 <div class="image-wrapper">
                     <img src="images/merch-2.jpg">
@@ -180,9 +190,21 @@
                     <img src="images/merch-3.jpg">
                     <h3>T-shirt 3</h3>
                     <h4>$24.99</h4>
-                    <p class="no-bottom-margin">This is where the description for Bombshell's item 3 will go</p>
+                    <p>This is where the description for Bombshell's item 3 will go</p>
+                </div>
+                <!-- <div class="image-wrapper">    
+                    <img src="images/merch-1.jpg">
+                    <h3>T-shirt 4</h3>
+                    <h4>$24.99</h4>
+                    <p>This is where the description for Bombshell's item 3 will go</p>
                 </div> 
-            
+                <div class="image-wrapper">    
+                    <img src="images/merch-2.jpg">
+                    <h3>T-shirt 5</h3>
+                    <h4>$24.99</h4>
+                    <p class="no-bottom-margin">This is where the description for Bombshell's item 3 will go</p>
+                </div>  -->
+              </div>
             </div>
         </section>
 
@@ -281,6 +303,7 @@
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/modernizr/modernizr.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     

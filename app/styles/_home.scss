@@ -272,6 +272,7 @@ nav.main-nav {
     text-align: center;
     width: 100%;
     background-color: white;
+    margin: -1px 0;
 }
 
 h2.section-title {
@@ -386,11 +387,16 @@ h3 {
 
 a {
   color: #fff;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  &:focus {
+    color: $white;
     text-decoration: none;
-    &:focus {
-      color: $white;
-      text-decoration: none;
-    }
+  }
+  &:hover {
+    color: $pink;
+    text-decoration: none;
+  }
 }
 
 #faq {
@@ -452,7 +458,7 @@ a {
 }
 
 .icon {
-    margin: 20px 3px;
+    margin: 20px 10px;
     cursor: pointer;
     transform: translateY(150%);
     width: 30px;
